@@ -16,3 +16,13 @@ message.textContent =
 
 container.append(screen, keyboard, message);
 document.body.append(container);
+
+// IMOPORT DATA FOR BUTTONS FROM KEYBOARD_ARRAYS //
+
+import {
+  firstRowEn,
+  secondRowEn,
+  thirdRowEn,
+  fourRowEn,
+  fifthRowEn,
+} from "./keyboard_arrays.js";
