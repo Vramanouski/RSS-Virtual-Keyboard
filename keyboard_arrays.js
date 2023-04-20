@@ -19,7 +19,7 @@
     '►'
 ] */
 
-// RU LANG
+// EN LANG
 
 export const firstRowEn = [
   "`",
@@ -35,7 +35,7 @@ export const firstRowEn = [
   "0",
   "-",
   "=",
-  "delete",
+  "Delete",
 ];
 export const secondRowEn = [
   "Tab",
@@ -66,7 +66,7 @@ export const thirdRowEn = [
   "l",
   ";",
   '"',
-  "return",
+  "Return",
 ];
 export const fourRowEn = [
   "Shift",
@@ -95,5 +95,3 @@ export const fifthRowEn = [
   "▼",
   "►",
 ];
-
-// EN LANG
