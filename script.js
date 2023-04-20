@@ -11,7 +11,8 @@ screen.classList.add("screen");
 
 const message = document.createElement("div");
 message.classList.add("message");
-message.textContent = "Designed for MacOS";
+message.textContent =
+  "Designed for MacOS. To change language press 'Control'+'Space'";
 
 container.append(screen, keyboard, message);
 document.body.append(container);
