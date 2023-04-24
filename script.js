@@ -41,6 +41,11 @@ import {
   thirdRowEn,
   fourRowEn,
   fifthRowEn,
+  firstRowRu,
+  secondRowRu,
+  thirdRowRu,
+  fourRowRu,
+  fifthRowRu,
 } from "./keyboard_arrays.js";
 
 // ADD BUTTONS TO THE KEYBOARD
@@ -63,6 +68,7 @@ const insertButtons = (array) => {
     if (button.textContent == "Delete") button.classList.add("wide");
     if (button.textContent == "Return") button.classList.add("wide");
     if (button.textContent == "Command") button.classList.add("wide");
+    if (button.textContent == "Control") button.classList.add("control");
   }
 };
 
@@ -71,3 +77,30 @@ insertButtons(secondRowEn);
 insertButtons(thirdRowEn);
 insertButtons(fourRowEn);
 insertButtons(fifthRowEn);
+
+// CHANGE LANGUAGE
+
+let language = "EN";
+let pressControl = 0;
+
+document.onkeydown = function (e) {
+  if (e.keyCode == 32 && pressControl == 1) {
+    changeLanguage();
+  } else if (e.key == "Control") {
+    pressControl = 1;
+  }
+  console.log(pressControl);
+};
+
+document.onkeyup = function (e) {
+  if (e.key == "Control") {
+    pressControl = 0;
+    console.log(pressControl);
+  }
+};
+
+function changeLanguage() {
+  language == "EN" ? (language = "RU") : (language = "EN");
+  pressControl = 0;
+  console.log(language);
+}
